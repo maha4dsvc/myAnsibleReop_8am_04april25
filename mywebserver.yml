@@ -3,14 +3,16 @@
   become: yes
   gather_facts: yes
   tasks: 
-  - name: i want to install apache2 websever ( sudo apt-get install apache2 )
+  - name: i want to install apache2 websever ( sudo apt-get install apache2 ) on ubuntu 
     apt:
       name: apache2
       state: present
+    when: ansible_os_family=="Debian"
   
-  - name: i want to start apache2 webserver ( sudo service apache2 start)
+  - name: i want to start apache2 webserver ( sudo service apache2 start) on ubntu 
     service: 
         name: apache2
         state: started
+    when: ansible_os_family=="Debian"
   
       
