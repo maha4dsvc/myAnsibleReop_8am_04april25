@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: installation of git in master(sudo apt-get install git)
+     apt:
+       name: git
+       state: present
+
+  - name: installation of tree in master(sudo apt-get install tree)
+    apt:
+      name: tree
+      state: present
