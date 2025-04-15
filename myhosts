@@ -13,4 +13,9 @@
 172.31.0.232
 
 
+[mywebservers:vars]
+key= value
+mywebpackageonubuntu= apache2
+
+
 

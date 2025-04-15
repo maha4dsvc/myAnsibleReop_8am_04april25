@@ -5,26 +5,26 @@
   tasks: 
   - name: i want to install apache2 websever ( sudo apt-get install apache2 ) on ubuntu 
     apt:
-      name: apache2
+      name: "{{mywebpackageonubuntu}}"
       state: present
     when: ansible_os_family=="Debian"
     
   
   - name: i want to start apache2 webserver ( sudo service apache2 start) on ubntu 
     service: 
-        name: apache2
+        name: "{{mywebpackageonubuntu}}"
         state: started
     when: ansible_os_family=="Debian"
   
   - name: i want  to install webserver on amazon nodes
     dnf:
-       name: httpd
+       name: "{{mywebpackageonRedhat}}"
        state: present
     when: ansible_os_family=="RedHat"
 
   - name: i want to start webserver on amazon nodes
     service: 
-        name: httpd
+        name: "{{mywebpackageonRedhat}}"
         state: started
     when: ansible_os_family== "RedHat"
      
