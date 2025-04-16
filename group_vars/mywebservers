@@ -1,5 +1,5 @@
 ---
 mywebpackageonubuntu: nginx 
 mywebpackageonRedhat: httpd
-myjavapackonubuntu: openjdk-8-jdk
-myjavapackonRedHat: java-1.8.0-amazon-corretto
+myjavapackonubuntu:  openjdk-17-jdk-headless
+myjavapackonRedHat: java-17-amazon-corretto-headless
