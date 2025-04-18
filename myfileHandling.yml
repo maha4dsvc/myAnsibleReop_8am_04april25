@@ -17,7 +17,7 @@
     copy: 
       src: mytestfile
       dest: /home/maha/myfolder
-    notify: mywebserverstart
+    
 
   - name: i want to copyy index.j2 page into nodes side
     template: 
@@ -35,7 +35,7 @@
   - name: mywebserverstart
     service:
       name: apache2
-      state: started 
+      state: restarted 
        
        
 
