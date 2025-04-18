@@ -18,4 +18,11 @@
       src: mytestfile
       dest: /home/maha/myfolder
 
+  - name: i want to copyy index.j2 page into nodes side
+    template: 
+       src:  myindex.j2
+       dest: /var/www/html/index.html
+       
+       
+
     
