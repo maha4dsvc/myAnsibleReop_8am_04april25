@@ -25,8 +25,8 @@
 
   - name: i want to download internet file 
     get_url:
-      url: http://example.com/path/file.conf
-      dest: /etc/foo.conf
+      url: https://updates.jenkins.io/download/war/2.506/jenkins.war
+      dest: /home/maha/myfolder/jenkins.war
       force_basic_auth: yes
 
        
