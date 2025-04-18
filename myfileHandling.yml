@@ -17,11 +17,13 @@
     copy: 
       src: mytestfile
       dest: /home/maha/myfolder
+    notify: mywebserverstart
 
   - name: i want to copyy index.j2 page into nodes side
     template: 
        src:  myindex.j2
        dest: /var/www/html/index.html
+    notify: mywebserverstart
 
   - name: i want to download internet file 
     get_url:
@@ -29,6 +31,11 @@
       dest: /home/maha/myfolder/jenkins.war
       force_basic_auth: yes
 
+  handlers:
+  - name: mywebserverstart
+    service:
+      name: apache2
+      state: started 
        
        
 
