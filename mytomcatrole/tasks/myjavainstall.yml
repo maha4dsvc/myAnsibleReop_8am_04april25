@@ -1,0 +1,9 @@
+---
+- name: update package  (apt-get update)
+  apt:
+   update_cache: yes
+
+- name: install java  (apt-get install openjdk-17-jdk)
+  apt:
+   name: openjdk-17-jdk
+   state: present
